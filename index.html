@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
     <!-- start of Header -->
     <header>
-        <div class="wrapper">
+        <div class="wrapper clearfix">
             <!-- start of top nav -->
             <nav class="top-nav clearfix">
                 <div class="logo ">
@@ -35,7 +35,7 @@
                 </div>
             </nav>
             <!-- end of top nav -->
-            <div class="main-heading clearfix">
+            <div class="main-heading">
                 <h1> 
                     <em>One</em> Magazine
                 </h1>
@@ -53,7 +53,7 @@
     <!-- end of Header-->
 
     <!-- start of main -->
-    <main>
+    <main id="maincontent">
         <div class="wrapper">
             <div class="news">
                 <h2>News Articles</h2>
@@ -74,46 +74,48 @@
                 </div>
                 <div class="description">
                     <h2>This week's highlight</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, sint, id repellendus iste tempore laudantium voluptatum veritatis suscipit eveniet sequi, rerum nulla nesciunt ratione eum doloremque nemo quibusdam fuga. Modi laborum obcaecati dolor, exercitationem dignissimos molestias veniam totam soluta, aut deserunt ipsum expedita sapiente quibusdam nobis distinctio veritatis consectetur ex beatae sunt voluptatibus delectus nam. Deleniti voluptatibus at, dicta vel nam nihil sit incidunt rem nostrum ab totam? Dignissimos, modi?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint omnis dolores placeat beatae fuga sequi, alias, voluptas eaque architecto facere harum dolorum. Exercitationem maiores eligendi, non eum eveniet illo optio tempore dignissimos quod, sunt placeat eaque maxime hic facilis. Dignissimos quae aut ducimus tenetur iure incidunt expedita ex facilis rerum quibusdam, optio soluta, minus hic beatae iste dolores perspiciatis inventore.</p>
                     <button>Read more</button>
                 </div>
             </section>
             <!-- end of section 2-->
         </div>
-        <div class="large-wrapper">
+        <!-- <div class="large-wrapper"> -->
         <!-- start of section 3-->
         <section class="trend-fashion clearfix">
-
-            <div class="trend-fashion-description">
-                <h2>New trends to lookout for</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velquis vero et quisquam doloremque reiciendis at! Quia officia dolore consequatur maxime. Libero neque ipsa nemo laborum quas nam ipsam quis eveniet. Quis impedit hic, accusantium magni adipisci incidunt nulla consequatur!
-                </p>
-                <button>Read more</button>
+            <div class="half-wrapper hw-first">
+                <div class="trend-fashion-description d-left">
+                    <h3><span>New trends to</span> lookout for</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident corrupti laboriosam dolorem cumque sequi impedit veniam nulla, repudiandae amet doloremque natus numquam, esse eos?
+                    </p>
+                    <button>Read more</button>
+                </div>
             </div>
-            <div class="trend-fashion-image full-right full-width">
+            <div class="trend-fashion-image i-right">
                 <img src="one-magazine-assets/image-5.jpg" alt="gorgeous lady with fur">
             </div>
         </section>
         <!-- end of section 3-->
         <!-- start of section 4-->
         <section class="trend-fashion clearfix">
-            <div class="trend-fashion-image full-left">
+            <div class="trend-fashion-image i-left">
                 <img src="one-magazine-assets/image-2.jpg" alt="two young boys with goggles">
             </div>
-            <div class="trend-fashion-description">
-                <h2>Behind the scenes from spring/summer fashion week</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quis vero et quisquam doloremque reiciendis at!
-                    Quia officia dolore consequatur maxime. Libero neque ipsa nemo laborum quas nam ipsam quis eveniet. Quis impedit
-                    hic, accusantium magni adipisci incidunt nulla consequatur!</p>
-                <button>Read more</button>
+            <div class="half-wrapper hw-second">
+                <div class="trend-fashion-description d-right">
+                    <h3><span>Behind the scenes from</span> spring/summer fashion week</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nulla eaque magnam officia necessitatibus harum sed qui facere ipsum iure ratione quasi, rerum quas deleniti.
+                    </p>
+                    <button>Read more</button>
+                </div>
             </div>
         </section>
-        </div>
+        <!-- </div> -->
         <!-- end of section 4-->
         <!-- start of section 5-->
         <section class="shop-event">
             <div class="wrapper">
-                <ul class="icons clearfix">
+                <ul class="icons">
                     <li>
                         <a href="#">
                             <i class="fas fa-shopping-bag"></i>
@@ -143,7 +145,7 @@
     <footer>
         <div class="wrapper clearfix">
             <div class="stay-updated">
-                <h3>stay updated</h3>
+                <h4>stay updated</h4>
                 <p>Subscribe to our newsletter to stay updated.</p>
                 <form action="#">
                     <input type="email" placeholder="email address">
@@ -151,7 +153,7 @@
                 </form>
             </div>
             <div class="contact">
-                <h3>Contact</h3>
+                <h4>Contact</h4>
                 <p>info@email.com|123-456-7890</p>
                 <p>123 some road, Toronto, ON</p>
                 <p>A5A 5A5, Canada</p>

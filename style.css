@@ -21,8 +21,16 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 * {
     margin: 0;
-    padding: 0; }
+    padding: 0; 
+}
 
+html {
+    font-size: 62.5%; 
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 h1,
 h2,
 h3,
@@ -34,10 +42,8 @@ img {
     padding: 0; 
 }
 
-html {
-    font-size: 62.5%; 
-}
-h1,h2,h3,button, .logo p{
+
+h1,h2,h3,h4,button, .logo p{
     text-transform:uppercase;
     font-family: 'Cormorant Garamond', serif ;
 }
@@ -45,7 +51,6 @@ li{
     text-transform: uppercase;
 }
 h2,h3{
-    font-size:4.9rem;
     font-weight: 600;
 }
 p,a {
@@ -60,9 +65,8 @@ p,a {
     width: 95%;
     margin: 0 auto; 
 }
-.large-wrapper{
-    max-width:1500px;
-    width:100%;
+.half-wrapper{
+    max-width:1200px;
     margin:0 auto;
 }
 ul{
@@ -72,6 +76,27 @@ a {
     text-decoration: none;
     color:#FCFCFC;
 }
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    left:50%;
+    z-index: 999;
+    background: white;
+    color: black;
+    display:none;
+}
+
+.skip-link:focus {
+    /* left: 0; */
+    display:block;
+}
+p{
+    color:#ACACAC;
+}
+
+
 /********************************/
 /**** end of general styles *****/
 /*******************************/
@@ -87,6 +112,9 @@ header{
     height:100vh;
     color:#FCFCFC;
     background-size:cover;
+}
+header p{
+    color:#FCFCFC
 }
 
 .logo{
@@ -139,9 +167,7 @@ h1{
 h1 em{
     display:block;
 }
-/* header .wrapper{
-    position:relative;
-} */
+
 .social-links{
     position:absolute;
     right:3%;
@@ -212,6 +238,9 @@ h1 em{
     margin-top:100px;
     margin-bottom:100px;
 }
+.descriptive-article button{
+    margin:20px 0;
+}
 .description-image{
     margin-right:50px;
     width:calc(30% - 50px);
@@ -227,9 +256,7 @@ h1 em{
     float:left;
     position:relative;
 }
-.description h2{
-    font-size:3.2rem;
-}
+
 .description p{
     margin-top:20px;
 }
@@ -240,11 +267,13 @@ button{
     color:#FCFCFC;
     padding:10px;
     font-size:1.8rem;
-    margin-top:40px;
 }
-.trend-fashion h2{
+h2{
     font-size:3.2rem;
-    margin:0 auto;
+    font-weight:600;
+}
+h3{
+    font-size:3rem;
 }
 .trend-fashion-description,
 .trend-fashion-image{
@@ -252,18 +281,27 @@ button{
     float:left;
 }
 
-.trend-fashion-description{
-    padding:100px 10% 0 7%;
+.trend-fashion-description h2 span{
+    display:block;
 }
-
+.trend-fashion-description{
+    padding-top:5%;
+    font-weight:500;
+    overflow:hidden;
+}
+.trend-fashion-description p{
+    margin:20px 0;
+}
+.d-left{
+    padding-right:8%;
+}
+.d-right{
+    padding-left:8%;
+}
 .trend-fashion-image img{
     width:100%;
-    display:inline-block;
+    display:block;
 }
-/* *{
-    border:1px red solid;
-} */
-
 
 
 .shop-event{
@@ -278,12 +316,12 @@ button{
 .shop-event li{
     margin:20px;
     width:calc(100%/3 - 60px);
-    float:left;
+    display:inline-block;
 }
 .shop-event a{
     font-family:'Cormorant Garamond', serif ;
     font-size:3rem;
-    font-weight:500;
+    font-weight:600;
 }
 
 .icons i{
@@ -302,7 +340,7 @@ button{
 footer{
     background-color:#E3E3E3;
 }
-footer h3{
+footer h4{
     font-size:2.5rem;
     margin-bottom:10px;
 }
@@ -315,21 +353,21 @@ footer .wrapper{
 .stay-updated form{
     width:100%;
 }
-input[type="email"]{
-    width:60%;
-    padding: 10px 20px 10px 20px;
-    margin: 10px 0 10px 0;
+
+input{
     border: 2px solid transparent;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif ;
+    padding:10px;
+    margin:10px 0;
+}
+input[type="email"]{
+    width:60%;    
 }
 input[type="submit"]{
-    width:20%;
+    width:fit-content;
     background-color:#000;
     color:#FCFCFC;
-    padding:10px 20px 10px 20px;
-    border: 2px solid transparent;
-    font-size:2rem;
 }
 .stay-updated{
     width:50%;
@@ -348,6 +386,7 @@ input[type="submit"]{
 }
 footer p.copy{
     background-color:#ACACAC;
+    color:#000;
     padding:10px 0;
     text-align:center;
     margin-bottom:100px;
@@ -356,9 +395,121 @@ footer p.copy{
 /****** end of the footer styles ******/
 /****************************************/
 
-@media(max-width:1160px){
+@media(min-width:1500px){
+    .social-links{
+        width:100%;
+        position:absolute;
+        bottom:2%;
+        right:0;
+    }
+    .social-links ul{
+        text-align:center;
+    }
+    .social-links li{
+        display:inline-block;
+    }
+    
+}
+@media(max-width:1150px){
+    .trend-fashion-description h2 span{
+        display:inline-block;
+    }
+    h2{
+        font-size:2.5rem;
+    }
+    .trend-fashion-description{
+        padding:30px 5% 30px 5%;
+    }
 
 }
+@media(max-width:1100px){
+    .description-image{
+        width:100%;
+        text-align:center;
+        float:none;
+    }
+    .description-image img{
+        width:50%;
+        height:50%;
+        display:inline-block;
+    }
+    .description{
+        width:100%;
+        margin:50px auto;
+        float:none;
+        text-align:center;
+    }
+
+    .trend-fashion-description,
+    .trend-fashion-image{
+        width:100%;
+        float:none;
+    }
+    h2{
+        font-size:3.2rem;
+    }
+    .trend-fashion{
+        text-align:center;
+    }
+    .shop-event a{
+        font-size:2.5rem;
+    }
+    .shop-event i{
+        font-size:4rem;
+    }
+}
+@media(max-width:840px){
+    h1{
+        font-size:10rem;
+        line-height:1;
+    }
+    .social-links{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
+    .social-links ul{
+        text-align:center;
+    }
+    .social-links li{
+        display:inline-block;
+    }
+    h2,.shop-event a{
+        font-size:2.8rem;
+    }
+    p,a{font-size:1.8rem;}
+    h3{
+        font-size:2.5rem;
+    }
+    .shop-event{
+        padding:20px 0;
+    }
+    .shop-event li{
+        margin:50px 0;
+        width:100%;
+        display:block;
+        font-weight:600;
+    }
+    .stay-updated{
+        width:100%;
+        float:none;
+        text-align:center;
+    }
+    .contact,
+    .footer-nav{
+        width:50%;
+        padding-top:30px;
+        position:relative;
+    }
+    .contact{
+        left:5%;
+    }
+    .footer-nav{
+        right:5%;
+    }
+}
+
 @media(max-width:680px){
     .top-nav-list li{
         display:none;
@@ -368,8 +519,11 @@ footer p.copy{
     }
 }
 
-@media(max-width:520px){
+@media(max-width:550px){
     .logo{
         visibility:hidden;
+    }
+    h1{
+        font-size:7rem;
     }
 }
