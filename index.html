@@ -16,7 +16,7 @@
 <body>
     <a href="#maincontent" class="skip-link">Skip to main content.</a>
     <!-- start of Header -->
-    <header>
+    <header id="home">
         <div class="wrapper clearfix">
             <!-- start of top nav -->
             <nav class="top-nav clearfix">
@@ -29,9 +29,9 @@
                         <li><a href=#>About</a></li>
                         <li><a href=#>Blog</a></li>
                         <li><a href=#>Contact</a></li>
-                        <i class="fas fa-bars"></i>
                     </ul>
-
+                    <!-- This tag is to show the hamburger menu on small size screens -->
+                    <i class="fas fa-bars"></i>
                 </div>
             </nav>
             <!-- end of top nav -->
@@ -42,10 +42,10 @@
             </div>
             <div class="social-links">
                 <ul class="icons">
-                    <li><a href="#"><span class="icon in"></span></a></li>
-                    <li><a href="#"><span class="icon fb"></span></a></li>
-                    <li><a href="#"><span class="icon sc"></span></a></li>
-                    <li><a href="#"><span class="icon tw"></span></a></li>
+                    <li><a href="#home"><span class="icon in"></span></a></li>
+                    <li><a href="#home"><span class="icon fb"></span></a></li>
+                    <li><a href="#home"><span class="icon sc"></span></a></li>
+                    <li><a href="#home"><span class="icon tw"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -82,9 +82,9 @@
         </div>
         <!-- <div class="large-wrapper"> -->
         <!-- start of section 3-->
-        <section class="trend-fashion clearfix">
+        <section class="trend-fashion tf-first clearfix">
             <div class="half-wrapper hw-first">
-                <div class="trend-fashion-description d-left">
+                <div class="trend-fashion-description">
                     <h3><span>New trends to</span> lookout for</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident corrupti laboriosam dolorem cumque sequi impedit veniam nulla, repudiandae amet doloremque natus numquam, esse eos?
                     </p>
@@ -97,7 +97,7 @@
         </section>
         <!-- end of section 3-->
         <!-- start of section 4-->
-        <section class="trend-fashion clearfix">
+        <section class="trend-fashion tf-second clearfix">
             <div class="trend-fashion-image i-left">
                 <img src="one-magazine-assets/image-2.jpg" alt="two young boys with goggles">
             </div>
@@ -117,19 +117,19 @@
             <div class="wrapper">
                 <ul class="icons">
                     <li>
-                        <a href="#">
+                        <a href="#home">
                             <i class="fas fa-shopping-bag"></i>
                             shop brands
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#home">
                             <i class="fas fa-users"></i>
                             community
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#home">
                             <i class="fas fa-calendar-check"></i>
                             Events
                         </a>
@@ -147,7 +147,7 @@
             <div class="stay-updated">
                 <h4>stay updated</h4>
                 <p>Subscribe to our newsletter to stay updated.</p>
-                <form action="#">
+                <form action="#home">
                     <input type="email" placeholder="email address">
                     <input type="submit" value="Subscribe">
                 </form>
@@ -160,10 +160,10 @@
             </div>
             <div class="footer-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#home">Blog</a></li>
+                    <li><a href="#home">Contact</a></li>
                 </ul>
             </div>
         </div>

@@ -46,9 +46,11 @@ img {
 h1,h2,h3,h4,button, .logo p{
     text-transform:uppercase;
     font-family: 'Cormorant Garamond', serif ;
+    transition: all 0.3s linear;
 }
 li{
     text-transform: uppercase;
+    transition: all 0.3s linear;
 }
 h2,h3{
     font-weight: 600;
@@ -85,11 +87,10 @@ a {
     z-index: 999;
     background: white;
     color: black;
-    display:none;
+    /* display:none; */
 }
 
 .skip-link:focus {
-    /* left: 0; */
     display:block;
 }
 p{
@@ -132,11 +133,14 @@ header p{
 .top-nav-list{
     float:right;
 }
-.top-nav-list i{
-    visibility:hidden;
-    font-size:2rem;
-    margin-top:30px;
-    line-height:2.9rem;
+.nav-right i{
+    visibility: hidden;
+    font-size: 3rem;
+    margin-top: 30px;
+    line-height: 2.9rem;
+    position: absolute;
+    top: 0;
+    right: 20px;
 }
 .nav-right li{
     margin:30px;
@@ -427,6 +431,7 @@ footer p.copy{
         width:100%;
         text-align:center;
         float:none;
+        margin-right: 0;
     }
     .description-image img{
         width:50%;
@@ -451,6 +456,15 @@ footer p.copy{
     .trend-fashion{
         text-align:center;
     }
+    .tf-first{
+        display:table;
+    }
+    .hw-first{
+        display:table-row-group;
+    }
+    .i-right{
+        display:table-header-group;
+    }
     .shop-event a{
         font-size:2.5rem;
     }
@@ -458,6 +472,7 @@ footer p.copy{
         font-size:4rem;
     }
 }
+
 @media(max-width:840px){
     h1{
         font-size:10rem;
@@ -479,12 +494,8 @@ footer p.copy{
         font-size:2.8rem;
     }
     p,a{font-size:1.8rem;}
-    h3{
-        font-size:2.5rem;
-    }
-    .shop-event{
-        padding:20px 0;
-    }
+    h3{font-size:2.5rem;}
+    .shop-event{padding:20px 0;}
     .shop-event li{
         margin:50px 0;
         width:100%;
@@ -509,13 +520,28 @@ footer p.copy{
         right:5%;
     }
 }
-
+@media screen and (orientation:landscape){
+    .social-links li{
+        display:block;
+    }
+    .social-links{
+        position:absolute;
+        right:3%;
+        bottom:3%;
+    }
+    .social-links ul{
+        text-align:right;
+    }
+}
 @media(max-width:680px){
     .top-nav-list li{
         display:none;
     }
-    .top-nav-list i{
+    .nav-right i{
         visibility:visible;
+    }
+    .social-links{
+        display:none;
     }
 }
 
@@ -524,6 +550,45 @@ footer p.copy{
         visibility:hidden;
     }
     h1{
-        font-size:7rem;
+        font-size:6.5rem;
+    }
+    .photos-section ul li:last-child{
+        display:none;
+    }
+    .photos-section .pics li{
+        margin:0 10px;
+        width:calc(50% - 20px);
+    }
+    .photos-section ul{
+        text-align:center;
+    }
+    .description-image img{
+        width:80%;
+    }
+    .descriptive-article{
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    button{font-size:2.2rem;}
+    
+}
+
+@media(max-width:440px){
+    h1{font-size:5.5rem;}
+    h2,h3{font-size:2.5rem;}
+    .shop-event a{
+        font-size:2rem;
+    }
+    p,a{font-size:1.5rem;}
+    input[type="email"],
+    input[type="submit"]{
+        width:100%;
+        text-align:center;
+    }
+    footer p{
+        color:#000;
+    }
+    footer .wrapper{
+        padding:50px 0;
     }
 }
