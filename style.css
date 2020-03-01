@@ -26,8 +26,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 html {
     font-size: 62.5%; 
+    transition:all 0.3s linear;
 }
-/* some of the font wieght does not imply on the fonts in firefox, this body rules help in correct font weight */
+/* some of the font weight does not apply on the fonts in firefox, this body rules help in correction to font weight */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -83,7 +84,7 @@ a {
     text-decoration: none;
     color:#FCFCFC;
 }
-p{color:#ACACAC;}
+p{color:#ACACAC; transition:all 0.3s linear;}
 img{
     width:100%;
     height:auto;
@@ -128,16 +129,22 @@ header p{color:#FCFCFC;}
     position: absolute;
     top: 0;
     right: 20px;
+    transition:all 0.3s linear;
+}
+.nav-right i:hover::before {
+    color:#000;
 }
 .nav-right li{
     margin:30px;
     float:left;
 }
+.nav-right a{transition:all 0.3s linear;}
 .nav-right a:hover{color:#000;}
 
 .main-heading{
     width:100%;
     line-height:12rem;
+    transition: all 0.3s linear;
 }
 .main-heading{font-weight: 500;}
 .main-heading em{font-weight:600;}/* One in the heading is a bit bold*/
@@ -156,6 +163,7 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
     position:absolute;
     right:3%;
     bottom:3%;
+    transition: all 0.3s linear;
 }
 .icons li{
     margin:10px;
@@ -171,6 +179,7 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
     font-size:2.9rem;
     /* icons font family from fontawesome.com */
     font-family: "Font Awesome 5 Brands"; 
+    transition:all 0.3s linear;
 }
 
 .in::before{ content: "\f16d"; color:#FCFCFC; }
@@ -194,6 +203,7 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
 /****** start of the main styles ******/
 /**************************************/
 
+/* first section */
 .news{
     text-align:center;
     margin:50px auto;
@@ -212,6 +222,7 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
 .photos-section .pics li:nth-child(3n){
     margin-right:0;
 }
+/* second section */
 .descriptive-article{
     margin-top:100px;
     margin-bottom:100px;
@@ -240,11 +251,17 @@ button{
     color:#FCFCFC;
     padding:10px;
     font-size:1.8rem;
+    transition:all 0.3s linear;
+}
+button:hover{
+    background-color:#000;
+    cursor:pointer;
 }
 h2{
     font-size:3.2rem;
     font-weight:600;
 }
+/* third section and common styles to section 3 and 4 */
 h3{
     font-size:3rem;
 }
@@ -272,7 +289,7 @@ h3{
     padding-left:8%;
 }
 
-
+/* section with the logos and links */
 .shop-event{
     background-image:url("./one-magazine-assets/image-9.jpg");
     background-size:cover;
@@ -291,6 +308,10 @@ h3{
     font-family:'Cormorant Garamond', serif ;
     font-size:3rem;
     font-weight:600;
+    transition:all 0.3s linear;
+}
+.shop-event a:hover{
+    color:#ACACAC;
 }
 
 .icons i{
@@ -314,7 +335,11 @@ footer h4{
     margin-bottom:10px;
 }
 footer ul a{
-    color:#000;
+    color:#000; 
+    transition:all 0.3s linear;
+}
+footer ul a:hover{
+    color:#ACACAC;
 }
 footer .wrapper{
     padding:100px 0;
@@ -329,14 +354,27 @@ input{
     font-family: 'Roboto', sans-serif ;
     padding:10px;
     margin:10px 0;
+    transition:all 0.3s linear;
 }
 input[type="email"]{
     width:60%;    
+
+}
+input[type="email"]:hover{
+    border:2px solid rgba(24, 51, 153, 0.78);  
+}
+input[type="email"]:focus{ 
+    background-color:rgba(24, 51, 153, 0.78);
 }
 input[type="submit"]{
     width:fit-content;
     background-color:#000;
     color:#FCFCFC;
+}
+input[type="submit"]:hover{
+    background-color:rgba(24, 51, 153, 0.78);
+    color:#000;
+    cursor:pointer;
 }
 .stay-updated{
     width:50%;
@@ -369,6 +407,7 @@ footer p.copy{
 /*************************************/
 
 @media(min-width:1500px){
+    /* all styles only linked to the side social  links */
     .social-links{
         width:100%;
         position:absolute;
@@ -384,6 +423,7 @@ footer p.copy{
     
 }
 @media(max-width:1150px){
+    /* changes in the section 3 and section 4 on resizing */
     .trend-fashion-description h2 span{
         display:inline-block;
     }
@@ -396,6 +436,7 @@ footer p.copy{
 
 }
 @media(max-width:1100px){
+    /* styles for section 2 containing image and description */
     .description-image{
         width:100%;
         text-align:center;
@@ -414,33 +455,27 @@ footer p.copy{
         text-align:center;
     }
 
+    /* styles for section 3 and 4 */
     .trend-fashion-description,
     .trend-fashion-image{
         width:100%;
         float:none;
     }
     h2{font-size:3.2rem;}
-    .trend-fashion{
-        text-align:center;
-    }
+    .trend-fashion{text-align:center;}
     .tf-first{
-        display:table;/* to reverse the order of the divs in the section with new trend heading*/
+        display:table;/* to reverse the order of the divs in the section with "new trend" heading*/
     }
-    .hw-first{
-        display:table-row-group;
-    }
-    .i-right{
-        display:table-header-group;
-    }
-    .shop-event a{
-        font-size:2.5rem;
-    }
-    .shop-event i{
-        font-size:4rem;
-    }
+    .hw-first{display:table-row-group;}
+    .i-right{display:table-header-group;}
+
+    /* styles for section 5 */
+    .shop-event a{font-size:2.5rem;}
+    .shop-event i{font-size:4rem;}
 }
 
 @media(max-width:840px){
+    /* header styles - main heading styles */
     h1{
         font-size:10rem;
         line-height:1;
@@ -451,17 +486,12 @@ footer p.copy{
         bottom:0;
         right:0;
     }
-    .social-links ul{
-        text-align:center;
-    }
-    .social-links li{
-        display:inline-block;
-    }
-    h2,.shop-event a{
-        font-size:2.8rem;
-    }
+    .social-links ul{text-align:center;}
+    .social-links li{display:inline-block;}
+    h2,.shop-event a{font-size:2.8rem;}
     p,a{font-size:1.8rem;}
     h3{font-size:2.5rem;}
+    /* section 5 styles */
     .shop-event{padding:20px 0;}
     .shop-event li{
         margin:50px 0;
@@ -474,6 +504,8 @@ footer p.copy{
         float:none;
         text-align:center;
     }
+
+    /* footer styles */
     .contact,
     .footer-nav{
         width:50%;
@@ -526,14 +558,19 @@ and (orientation:portrait){
 }
 
 @media(max-width:550px){
+    /* header styles */
     .logo{visibility:hidden;}
     h1{font-size:6.5rem;}
+
+    /* section 1 styles in main tag */
     .photos-section ul li:last-child{display:none;}
     .photos-section .pics li{
         margin:0 10px;
         width:calc(50% - 20px);
     }
     .photos-section ul{text-align:center;}
+
+    /* section 2 styles */
     .description-image img{width:80%;}
     .descriptive-article{
         margin-top:50px;
@@ -544,13 +581,16 @@ and (orientation:portrait){
 }
 
 @media(max-width:440px){
+    /* header styles */
     h1{font-size:5.5rem;}
+    /* main styles */
     h2,
     h3{font-size:2.5rem;}
     .shop-event a{
         font-size:2rem;
     }
     p,a{font-size:1.5rem;}
+    /* footer form styles */
     input[type="email"],
     input[type="submit"]{
         width:100%;
