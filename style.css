@@ -27,6 +27,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 html {
     font-size: 62.5%; 
 }
+/* some of the font wieght does not imply on the fonts in firefox, this body rules help in correct font weight */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,8 +43,12 @@ img {
     padding: 0; 
 }
 
-
-h1,h2,h3,h4,button, .logo p{
+h1,
+h2,
+h3,
+h4,
+button,
+.logo p{
     text-transform:uppercase;
     font-family: 'Cormorant Garamond', serif ;
     transition: all 0.3s linear;
@@ -52,10 +57,12 @@ li{
     text-transform: uppercase;
     transition: all 0.3s linear;
 }
-h2,h3{
+h2,
+h3{
     font-weight: 600;
 }
-p,a {
+p,
+a {
     font-family: 'Roboto',sans-serif ;
     font-size: 2rem;
     font-weight: 300;
@@ -71,33 +78,17 @@ p,a {
     max-width:1200px;
     margin:0 auto;
 }
-ul{
-    list-style-type: none;
-}
+ul{list-style-type: none;}
 a {
     text-decoration: none;
     color:#FCFCFC;
 }
-
-.skip-link {
-    position: absolute;
-    left: -1000px;
-    top: 5px;
-    left:50%;
-    z-index: 999;
-    background: white;
-    color: black;
-    /* display:none; */
-}
-
-.skip-link:focus {
+p{color:#ACACAC;}
+img{
+    width:100%;
+    height:auto;
     display:block;
 }
-p{
-    color:#ACACAC;
-}
-
-
 /********************************/
 /**** end of general styles *****/
 /*******************************/
@@ -114,9 +105,7 @@ header{
     color:#FCFCFC;
     background-size:cover;
 }
-header p{
-    color:#FCFCFC
-}
+header p{color:#FCFCFC;}
 
 .logo{
     width:20%;
@@ -130,9 +119,7 @@ header p{
     width:80%;
     float:left;
 }
-.top-nav-list{
-    float:right;
-}
+.top-nav-list{float:right;}
 .nav-right i{
     visibility: hidden;
     font-size: 3rem;
@@ -146,20 +133,14 @@ header p{
     margin:30px;
     float:left;
 }
-.nav-right a:hover{
-    color:#000;
-}
+.nav-right a:hover{color:#000;}
 
 .main-heading{
     width:100%;
     line-height:12rem;
 }
-.main-heading{
-    font-weight: 500;
-}
-.main-heading em{
-    font-weight:600;
-}
+.main-heading{font-weight: 500;}
+.main-heading em{font-weight:600;}/* One in the heading is a bit bold*/
 
 h1{
     font-size:15rem;
@@ -168,10 +149,9 @@ h1{
     margin:0 auto;
     padding:10% 0;
 }
-h1 em{
-    display:block;
-}
+h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
 
+/*** social icons styles ***/
 .social-links{
     position:absolute;
     right:3%;
@@ -232,12 +212,6 @@ h1 em{
 .photos-section .pics li:nth-child(3n){
     margin-right:0;
 }
-.photos-section img{
-    width:100%;
-    height:100%;
-    display:block;
-}
-
 .descriptive-article{
     margin-top:100px;
     margin-bottom:100px;
@@ -249,11 +223,6 @@ h1 em{
     margin-right:50px;
     width:calc(30% - 50px);
     float:left;
-}
-.description-image img{
-    width:100%;
-    height:100%;
-    display:block;
 }
 .description{
     width:70%;
@@ -301,10 +270,6 @@ h3{
 }
 .d-right{
     padding-left:8%;
-}
-.trend-fashion-image img{
-    width:100%;
-    display:block;
 }
 
 
@@ -399,6 +364,10 @@ footer p.copy{
 /****** end of the footer styles ******/
 /****************************************/
 
+/**************************************/
+/******* start of media queries ******/
+/*************************************/
+
 @media(min-width:1500px){
     .social-links{
         width:100%;
@@ -450,14 +419,12 @@ footer p.copy{
         width:100%;
         float:none;
     }
-    h2{
-        font-size:3.2rem;
-    }
+    h2{font-size:3.2rem;}
     .trend-fashion{
         text-align:center;
     }
     .tf-first{
-        display:table;
+        display:table;/* to reverse the order of the divs in the section with new trend heading*/
     }
     .hw-first{
         display:table-row-group;
@@ -513,58 +480,61 @@ footer p.copy{
         padding-top:30px;
         position:relative;
     }
-    .contact{
-        left:5%;
-    }
-    .footer-nav{
-        right:5%;
-    }
+    .contact{left:5%;}
+    .footer-nav{right:5%;}
 }
-@media screen and (orientation:landscape){
-    .social-links li{
-        display:block;
-    }
+
+/* media query to set rules to the landscapes mode of the mobile devices */
+@media screen 
+and (orientation:landscape)
+and (max-width:840px){
+    .social-links li{display:block;}
     .social-links{
         position:absolute;
         right:3%;
         bottom:3%;
     }
-    .social-links ul{
-        text-align:right;
-    }
+    .social-links ul{text-align:right;}
 }
+
+/* media query to show up the hamburger menu*/
 @media(max-width:680px){
-    .top-nav-list li{
-        display:none;
-    }
-    .nav-right i{
-        visibility:visible;
-    }
+    .top-nav-list li,
     .social-links{
         display:none;
+    }
+    .nav-right i{visibility:visible;}
+}
+
+/* here the repetition of the query is to set the rules to two different conditions but trying to separate selectors with comma gives error and using "and" does not gives desired results */
+@media screen 
+and (min-width:1500px){
+    .main-heading{
+        position:absolute;
+        top:30%;
+        left:0;
+    }
+}
+/* Media query to handle the portrait mode of the mobile devices */
+@media (max-width:840px) 
+and (orientation:portrait){
+    .main-heading{
+        position:absolute;
+        top:30%;
+        left:0;
     }
 }
 
 @media(max-width:550px){
-    .logo{
-        visibility:hidden;
-    }
-    h1{
-        font-size:6.5rem;
-    }
-    .photos-section ul li:last-child{
-        display:none;
-    }
+    .logo{visibility:hidden;}
+    h1{font-size:6.5rem;}
+    .photos-section ul li:last-child{display:none;}
     .photos-section .pics li{
         margin:0 10px;
         width:calc(50% - 20px);
     }
-    .photos-section ul{
-        text-align:center;
-    }
-    .description-image img{
-        width:80%;
-    }
+    .photos-section ul{text-align:center;}
+    .description-image img{width:80%;}
     .descriptive-article{
         margin-top:50px;
         margin-bottom:50px;
@@ -575,7 +545,8 @@ footer p.copy{
 
 @media(max-width:440px){
     h1{font-size:5.5rem;}
-    h2,h3{font-size:2.5rem;}
+    h2,
+    h3{font-size:2.5rem;}
     .shop-event a{
         font-size:2rem;
     }
@@ -585,10 +556,10 @@ footer p.copy{
         width:100%;
         text-align:center;
     }
-    footer p{
-        color:#000;
-    }
-    footer .wrapper{
-        padding:50px 0;
-    }
+    footer p{color:#000;}
+    footer .wrapper{padding:50px 0;}
 }
+
+/**************************************/
+/******* end of media queries ******/
+/*************************************/
