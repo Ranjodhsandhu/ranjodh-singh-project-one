@@ -235,6 +235,10 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
     width:calc(30% - 50px);
     float:left;
 }
+
+.trend-fashion-image img{
+    object-fit: cover;
+}
 .description{
     width:70%;
     float:left;
