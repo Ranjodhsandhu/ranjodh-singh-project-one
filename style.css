@@ -11,14 +11,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /********************************/
 /**** start of genral styles ****/
 /*******************************/
-
-/********* colors **********/
-/* white #FCFCFC, rgb(252,252,252)   */
-/* Very light grey #E3E3E3, rgb(227,227,227)  */
-/* Black #000, rgb(0,0,0)  */
-/* Grey #ACACAC, rgb(172,172,172)  */
-/* Sapphire 78 #183399 78%, rgba(24, 51, 153, 0.78) */
-
 * {
     margin: 0;
     padding: 0; 
