@@ -9,7 +9,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /********************************/
-/**** start of genral styles ****/
+/**** start of general styles ****/
 /*******************************/
 * {
     margin: 0;
@@ -172,19 +172,14 @@ h1 em{display:block;}/* To keep the heading on two lines and for emphasis also*/
     /* icons font family from fontawesome.com */
     font-family: "Font Awesome 5 Brands"; 
     transition:all 0.3s linear;
+    color:#FCFCFC;
 }
+.in::before{ content: "\f16d"; }
+.fb::before{ content: "\f39e"; }
+.sc::before{ content: "\f2ac"; }
+.tw::before { content: "\f099"; }
 
-.in::before{ content: "\f16d"; color:#FCFCFC; }
-.in:hover::before{ color:#000; }
-
-.fb::before{ content: "\f39e"; color:#FCFCFC; }
-.fb:hover::before{ color:#000; }
-
-.sc::before{ content: "\f2ac"; color:#FCFCFC; }
-.sc:hover::before{ color:#000; }
-
-.tw::before { content: "\f099"; color:#FCFCFC; }
-.tw:hover::before{ color:#000; }
+.icon:hover::before{ color:#000; }
 
 /**************************************/
 /******* end of the header syles ******/
