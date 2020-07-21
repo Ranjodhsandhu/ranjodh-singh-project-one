@@ -71,12 +71,17 @@ a {
     max-width:1200px;
     margin:0 auto;
 }
-ul{list-style-type: none;}
+ul{  
+    list-style-type: none;
+}
 a {
     text-decoration: none;
     color:#FCFCFC;
 }
-p{color:#ACACAC; transition:all 0.3s linear;}
+p{
+    color:#ACACAC; 
+    transition:all 0.3s linear;
+}
 img{
     width:100%;
     height:auto;
